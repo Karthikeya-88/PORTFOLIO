@@ -1,0 +1,98 @@
+#ask-me {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#ask-me h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#ask-me p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#ask-me form {
+  display: flex;
+  flex-direction: column;
+}
+
+#ask-me label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+#ask-me input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#ask-me textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#ask-me button {
+  padding: 10px 20px;
+  align-self: center;
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+#ask-me button:hover {
+  color: black;
+  text-shadow: -2px 1px 1px;
+}
+
+@media (max-width: 768px) {
+  #ask-me {
+    padding: 10px;
+    width: fit-content;
+  }
+
+  #ask-me h2 {
+    font-size: 1.5rem;
+  }
+
+  #ask-me p {
+    font-size: 0.9rem;
+  }
+
+  #ask-me input[type="text"],
+  #ask-me textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #ask-me button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  #ask-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 98vw;
+  }
+}
