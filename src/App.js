@@ -1,5 +1,5 @@
 import React from "react";
-import { IoIosNavigate } from "react-icons/io";
+import { IoNavigate } from "react-icons/io5";
 import { MdEmail, MdOutlineCall } from "react-icons/md";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
@@ -289,7 +289,7 @@ function App() {
               href="https://drive.google.com/file/d/1iLjL1v946ZiBAqocyWq0DhOcco4hiwVQ/view?usp=sharing"
               className="resume-el"
             >
-              <IoIosNavigate />
+              <IoNavigate />
             </a>
           </h6>
           <div className="text-center pb-2">
