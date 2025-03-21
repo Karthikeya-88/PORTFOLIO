@@ -19,16 +19,16 @@
 
 .about-me-ul li {
   background-image: linear-gradient(to left, #f4d03f, #a9dfbf, #d7bde2);
-  margin: 10px 0;
-  padding: 15px;
+  margin: 8px 40px;
+  padding: 14px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: all 0.8s ease;
+  transition: all 0.6s ease;
   color: #000;
   list-style: none;
 }
 
 .about-me-ul li:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transform: scale(1.02);
+  transform: scale(1.06);
 }

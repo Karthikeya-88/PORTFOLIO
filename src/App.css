@@ -110,7 +110,7 @@ h2 {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-size: cover !important;
-  font-size: 2.6pc !important;
+  font-size: 2.4pc !important;
 }
 
 .App-logo {
@@ -447,7 +447,7 @@ h2 {
 
 .button-icons {
   background: transparent;
-  font-size: 40px;
+  font-size: 48px;
   border: 0;
 }
 
@@ -553,7 +553,7 @@ h2 {
   }
 
   .cert-images {
-    width: 240px;
+    width: 260px;
     padding: 10px;
   }
 
@@ -609,14 +609,14 @@ h2 {
 
   .button-icons {
     background: transparent;
-    font-size: 28px;
+    font-size: 32px;
     border: 0;
   }
 }
 
 @media (max-width: 480px) {
   .cert-images {
-    width: 220px;
+    width: 260px;
     padding: 8px;
   }
 

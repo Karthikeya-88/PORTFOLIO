@@ -147,7 +147,7 @@ function App() {
           className="mb-2 mt-5 p-2 pt-2 section-hidden"
           ref={(el) => (sectionRefs.current[1] = el)}
         >
-          <h2 className="text-center text-info">Expertise Offered</h2>
+          <h2 className="text-center text-info mb-4">Expertise Offered</h2>
           <div className="expertise-types m-1" style={{ fontFamily: "Roboto" }}>
             <p className="text-reveal">
               <span data-text="Full">Full </span>
@@ -202,7 +202,12 @@ function App() {
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div
           className="mb-2 p-4 text-black rounded border border-light section-hidden"
-          style={{ backgroundColor: "#e1f1fa", width: "96vw" }}
+          style={{
+            backgroundColor: "#e1f1fa",
+            width: "96vw",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.05)",
+            transform: "translateZ(0)",
+          }}
           id="myExperience"
           ref={(el) => (sectionRefs.current[2] = el)}
         >
@@ -211,7 +216,6 @@ function App() {
             <h4 className="experience-header">
               <b>Teaching Assistant - Nxtwave</b>
             </h4>
-            <h6 className="experience-header">6 Months</h6>
           </div>
           <ul
             style={{
@@ -227,11 +231,11 @@ function App() {
                 font: "20px Garamond, Perpetua",
               }}
             >
-              As a Teaching Assistant for the CCBPian community, I offered
-              expert mentorship in the MERN stack, helping learners navigate its
-              challenges with ease. My focus was on simplifying complex
-              concepts, debugging intricate issues, and fostering critical
-              thinking to enable students to solve problems independently.
+              As a Teaching Assistant for CCBPian learners, I provided hands-on
+              support in mastering the MERN stack, Programming with Python and
+              Querying with SQL. My role involved breaking down complex
+              concepts, debugging code, and equipping students with practical
+              strategies to tackle technical challenges independently.
             </li>
             <li
               className="experience-li"
@@ -241,9 +245,11 @@ function App() {
                 font: "20px Garamond, Perpetua",
               }}
             >
-              With over 300+ queries resolved, I made learning engaging and
-              practical, equipping students with confidence and real-world
-              skills.
+              I focused on nurturing critical thinking by guiding learners to
+              diagnose issues and refine their coding approaches. Through
+              collaborative troubleshooting and clear communication, I helped
+              students build confidence in their ability to solve problems and
+              deliver functional solutions.
             </li>
           </ul>
           <div className="text-justify">
@@ -276,7 +282,12 @@ function App() {
         <div
           className="mb-2 p-4 text-black rounded border border-black section-hidden"
           id="myResume"
-          style={{ backgroundColor: "#F6F6C8", width: "94vw" }}
+          style={{
+            backgroundColor: "rgba(246, 246, 200, 0.9)",
+            width: "94vw",
+            backdropFilter: "blur(8px)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+          }}
           ref={(el) => (sectionRefs.current[3] = el)}
         >
           <h2 className="text-center text-info">My Resume</h2>
@@ -289,7 +300,12 @@ function App() {
               href="https://drive.google.com/file/d/1iLjL1v946ZiBAqocyWq0DhOcco4hiwVQ/view?usp=sharing"
               className="resume-el"
             >
-              <IoNavigate />
+              <IoNavigate
+                style={{
+                  marginLeft: "8px",
+                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.1))",
+                }}
+              />
             </a>
           </h6>
           <div className="text-center pb-2">
@@ -320,7 +336,12 @@ function App() {
         <div
           className="mb-2 p-4 text-dark rounded border border-dark section-hidden"
           id="myCert"
-          style={{ width: "94vw", backgroundColor: "#e1f1fa" }}
+          style={{
+            width: "94vw",
+            backgroundColor: "#e1f1fa",
+            backdropFilter: "blur(8px)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+          }}
           ref={(el) => (sectionRefs.current[4] = el)}
         >
           <h2 className="text-center text-info">My Certifications</h2>
@@ -386,7 +407,16 @@ function App() {
           />
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <div className="want-to-hire-container mb-2 p-2 pb-1" id="hireMe">
+        <div
+          className="want-to-hire-container mb-2 p-2 pb-1"
+          id="hireMe"
+          style={{
+            backdropFilter: "blur(8px)",
+            background: "rgba(255, 255, 255, 0.9)",
+            borderRadius: "20px",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+          }}
+        >
           <h2 className="text-center text-info">Want to Hire Me</h2>
           <div className="button-icons-container mt-4">
             <button type="button" className="button-icons">

@@ -19,7 +19,7 @@
 }
 
 .project-image {
-  width: 340px;
+  width: 400px;
   height: 200px;
   border-radius: 8px;
   border: 2.6px solid #00a9f2;
@@ -162,16 +162,25 @@
 }
 
 @media screen and (max-width: 768px) {
+  .project-container {
+    padding: 4px 12px 16px 0px;
+  }
+
+  .project-card {
+    border: 1px solid #e3c8fa;
+  }
+
   .filter-options button {
     position: relative;
     display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
+    padding: 14px 28px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     background: transparent;
     border: 1px solid #fff;
     cursor: pointer;
+    gap: 20px;
     overflow: hidden;
     transition: color 0.2s ease-in-out;
   }
@@ -182,7 +191,7 @@
   }
 
   .project-image {
-    width: 300px;
+    width: 280px;
     height: 160px;
     border-radius: 8px;
     border: 2.6px solid #00a9f2;

@@ -79,7 +79,6 @@ const Skills = () => {
                     className="mb-2"
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title={`Proficient in ${skill}`}
                   >
                     <i
                       className={`fab fa-${skill.toLowerCase()} me-2`}

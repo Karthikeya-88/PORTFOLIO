@@ -56,8 +56,9 @@
 }
 
 #ask-me button:hover {
-  color: black;
-  text-shadow: -2px 1px 1px;
+  text-shadow: 1px 1px #fff;
+  color: #000;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
