@@ -12,8 +12,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import ProjectFilter from "./components/Projects";
-import About from "./components/About";
 import useSectionObserver from "./components/ToggleVisibilty";
+import About from "./components/About";
 
 function App() {
   const sectionRefs = useSectionObserver();
@@ -85,10 +85,10 @@ function App() {
                     <a
                       className="local-anchor-el nav-link"
                       aria-current="page"
-                      href="#myExperience"
+                      href="#mySkills"
                       id="navbar-skills"
                     >
-                      Experience
+                      My Skills
                     </a>
                   </li>
                   <li className="nav-item">
@@ -100,14 +100,15 @@ function App() {
                       Check My Resume
                     </a>
                   </li>
+
                   <li className="nav-item">
                     <a
                       className="local-anchor-el nav-link"
                       aria-current="page"
-                      href="#mySkills"
+                      href="#myExperience"
                       id="navbar-skills"
                     >
-                      My Skills
+                      Experience
                     </a>
                   </li>
                   <li className="nav-item">
@@ -142,66 +143,60 @@ function App() {
             </div>
           </div>
         </nav>
-        <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <div
-          className="mb-2 mt-5 p-2 pt-2 section-hidden"
-          ref={(el) => (sectionRefs.current[1] = el)}
-        >
-          <h2 className="text-center text-info mb-4">Expertise Offered</h2>
-          <div className="expertise-types m-1" style={{ fontFamily: "Roboto" }}>
-            <p className="text-reveal">
-              <span data-text="Full">Full </span>
-              <span data-text="Stack">Stack </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-            <p className="text-reveal">
-              <span data-text="MERN ">MERN </span>
-              <span data-text="Stack">Stack </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-          </div>
-          <div className="expertise-types m-1" style={{ fontFamily: "Roboto" }}>
-            <p className="text-reveal">
-              <span data-text="Software">Software </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-            <p className="text-reveal">
-              <span data-text="Web">Web </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-          </div>
-          <div className="expertise-types m-1" style={{ fontFamily: "Roboto" }}>
-            <p className="text-reveal">
-              <span data-text="Back">Back </span>
-              <span data-text="End">End </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-            <p className="text-reveal">
-              <span data-text="Front">Front </span>
-              <span data-text="End">End </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-          </div>
-          <div className="expertise-types m-1" style={{ fontFamily: "Roboto" }}>
-            <p className="text-reveal">
-              <span data-text="Application">Application </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-            <p className="text-reveal">
-              <span data-text="React">React </span>
-              <span data-text="Native">Native </span>
-              <span data-text="Developer">Developer</span>
-            </p>
-          </div>
+        <div className="mt-5 pt-4" id="aboutMe">
+          <About />
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <About
+        <Skills
           className="section-hidden"
-          ref={(el) => (sectionRefs.current[1] = el)}
+          ref={(el) => (sectionRefs.current[4] = el)}
         />
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div
-          className="mb-2 p-4 text-black rounded border border-light section-hidden"
+          className="mb-2 p-4 text-black rounded border border-black"
+          id="myResume"
+          style={{
+            backgroundColor: "rgba(246, 246, 200, 0.9)",
+            width: "94vw",
+            backdropFilter: "blur(8px)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+          }}
+        >
+          <h2 className="text-center text-info">My Resume</h2>
+          <h6
+            className="m-4 resume-text text-center"
+            style={{ fontWeight: "600" }}
+          >
+            Download My Resume:{" "}
+            <a
+              href="https://drive.google.com/file/d/1iLjL1v946ZiBAqocyWq0DhOcco4hiwVQ/view?usp=sharing"
+              className="resume-el"
+            >
+              <IoNavigate
+                style={{
+                  marginLeft: "8px",
+                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.1))",
+                }}
+              />
+            </a>
+          </h6>
+          <div className="text-center pb-2">
+            <marquee
+              behavior="scroll"
+              direction="right"
+              scrollamount="8"
+              width="40%"
+            >
+              <h4 className="text-center text-warning open-to-relocation">
+                Open to Relocation
+              </h4>
+            </marquee>
+          </div>
+          <h4 className="mb-3 text-center">I'm flexible regarding job types</h4>
+        </div>
+        <hr style={{ width: "80%", border: "2px solid seashell" }} />
+        <div
+          className="mb-2 p-4 text-black rounded border border-light"
           style={{
             backgroundColor: "#e1f1fa",
             width: "96vw",
@@ -209,7 +204,6 @@ function App() {
             transform: "translateZ(0)",
           }}
           id="myExperience"
-          ref={(el) => (sectionRefs.current[2] = el)}
         >
           <h2 className="text-center text-info">Experience</h2>
           <div className="text-center pl-4 pr-4 p-3 w-100">
@@ -279,55 +273,7 @@ function App() {
           </div>
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <div
-          className="mb-2 p-4 text-black rounded border border-black section-hidden"
-          id="myResume"
-          style={{
-            backgroundColor: "rgba(246, 246, 200, 0.9)",
-            width: "94vw",
-            backdropFilter: "blur(8px)",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
-          }}
-          ref={(el) => (sectionRefs.current[3] = el)}
-        >
-          <h2 className="text-center text-info">My Resume</h2>
-          <h6
-            className="m-4 resume-text text-center"
-            style={{ fontWeight: "600" }}
-          >
-            Download My Resume:{" "}
-            <a
-              href="https://drive.google.com/file/d/1iLjL1v946ZiBAqocyWq0DhOcco4hiwVQ/view?usp=sharing"
-              className="resume-el"
-            >
-              <IoNavigate
-                style={{
-                  marginLeft: "8px",
-                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.1))",
-                }}
-              />
-            </a>
-          </h6>
-          <div className="text-center pb-2">
-            <marquee
-              behavior="scroll"
-              direction="right"
-              scrollamount="8"
-              width="40%"
-            >
-              <h4 className="text-center text-warning open-to-relocation">
-                Open to Relocation
-              </h4>
-            </marquee>
-          </div>
-          <h4 className="mb-3 text-center">I'm flexible regarding job types</h4>
-        </div>
-        <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <Skills
-          className="section-hidden"
-          ref={(el) => (sectionRefs.current[4] = el)}
-        />
-        <hr style={{ width: "80%", border: "2px solid seashell" }} />
+
         <div className="mb-0 p-4" id="myProjects">
           <h2 className="text-center text-info">My Projects</h2>
           <ProjectFilter />
@@ -414,7 +360,7 @@ function App() {
             backdropFilter: "blur(8px)",
             background: "rgba(255, 255, 255, 0.9)",
             borderRadius: "20px",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
+            border: "2.8px solid rgba(255, 255, 255, 0.3)",
           }}
         >
           <h2 className="text-center text-info">Want to Hire Me</h2>

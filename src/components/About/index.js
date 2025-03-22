@@ -1,28 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./about.css";
 
 const About = () => {
+  const texts = [
+    "a Full Stack Developer",
+    "a MERN Stack Developer",
+    "an Application Developer",
+    "a React Native Developer",
+  ];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentText = texts[currentTextIndex];
+    const timeout = isDeleting ? 100 : 200;
+
+    if (!isDeleting) {
+      if (displayText.length < currentText.length) {
+        const timeoutId = setTimeout(() => {
+          setDisplayText(currentText.slice(0, displayText.length + 1));
+        }, timeout);
+        return () => clearTimeout(timeoutId);
+      } else {
+        const timeoutId = setTimeout(() => setIsDeleting(true), 1000);
+        return () => clearTimeout(timeoutId);
+      }
+    } else {
+      if (displayText.length > 0) {
+        const timeoutId = setTimeout(() => {
+          setDisplayText(currentText.slice(0, displayText.length - 1));
+        }, timeout);
+        return () => clearTimeout(timeoutId);
+      } else {
+        setIsDeleting(false);
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      }
+    }
+  }, [displayText, isDeleting, currentTextIndex, texts]);
+
   return (
-    <div className="about-me-container mb-2 p-2 rounded mt-5 pt-4" id="aboutMe">
-      <h2 className="text-center text-info">About Me</h2>
-      <ul className="about-me-ul m-1">
-        <li>
-          I am Karthikeya from Karimnagar, Telangana, with a B.Com in{" "}
-          <b>Computer Applications</b>, I merge human-centric strategies with
-          technical precision. Trained in Nxtwave’s <strong>MERN stack</strong>,
-          I build scalable, user-centric solutions while mastering foundational
-          tools like Git, CLI, and core CS concepts. My journey from business
-          education to full-stack development reflects my drive to innovate
-          through code.
-        </li>
-        <li>
-          Fueled by a passion for problem-solving, I specialize in creating
-          intuitive software solutions, whether refining frontend interfaces or
-          optimizing backend systems. I thrive in dynamic teams, aiming to
-          contribute my skills in full-stack, backend, or frontend roles to
-          deliver technology that drives progress and elevates user experiences.
-        </li>
-      </ul>
+    <div className="home-container">
+      <h2 className="text-center text-info mb-4">About Me</h2>
+      <div className="hero-section">
+        <div className="hero-image mobile-image">
+          <div className="image-wrapper">
+            <img
+              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1742632927/IMG_20230106_135825-2_lykx0h.jpg"
+              alt="Karthikeya D"
+            />
+            <div className="image-animation"></div>
+          </div>
+        </div>
+        <div className="hero-text">
+          <h1 className="animated-text">
+            I am <span className="text-slider">{displayText}</span>
+          </h1>
+          <p className="about-paragraph">
+            With a B.Com in <b>Computer Applications</b>, I combine
+            human-centric strategies with technical expertise. Trained in
+            Nxtwave’s <strong>MERN stack</strong>, I build scalable,
+            user-focused solutions, mastering tools like Git, CLI, and core CS
+            concepts. Skilled in problem-solving, I craft intuitive software by
+            refining frontend interfaces and optimizing backend systems. I aim
+            to contribute my full-stack, backend, or frontend skills to deliver
+            impactful technology and elevate user experiences in collaborative
+            teams.
+          </p>
+        </div>
+        <div className="hero-image desktop-image">
+          <div className="image-wrapper">
+            <img
+              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1742632927/IMG_20230106_135825-2_lykx0h.jpg"
+              alt="Karthikeya D"
+            />
+            <div className="image-animation"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

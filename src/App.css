@@ -6,6 +6,7 @@
 
 #navbar-about {
   font-size: medium;
+  color: #fff;
 }
 
 #navbar-skills {
@@ -105,12 +106,12 @@ a:hover {
 
 h2 {
   font-family: "Book antique" !important;
-  font-weight: 1000;
+  font-weight: 600;
   background-image: url("https://res.cloudinary.com/dnmyyqfhs/image/upload/v1739200486/orsrc44672_iinmpm.jpg") !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-size: cover !important;
-  font-size: 2.4pc !important;
+  font-size: 2pc !important;
 }
 
 .App-logo {
@@ -204,7 +205,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  color: #020076;
+  color: #4901ff;
   animation: reveal 8s steps(200);
   overflow: hidden;
 }
@@ -373,7 +374,7 @@ h2 {
 }
 
 #myCert {
-  background: #ececec;
+  background: lightgray !important;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
@@ -408,7 +409,7 @@ h2 {
 }
 
 .want-to-hire-container {
-  background: #ebebeb;
+  background: transparent !important;
   padding: 40px 30px 0px 100px;
   border-top-left-radius: 120px;
   border-top-right-radius: 20px;
