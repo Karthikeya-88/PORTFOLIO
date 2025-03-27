@@ -4,7 +4,12 @@ import "./index.css";
 class AskMeSection extends Component {
   state = {
     name: "",
+    email: "",
+    subject: "",
     message: "",
+    isSubmitting: false,
+    isSuccess: false,
+    error: null,
   };
 
   handleInputChange = (event) => {
@@ -12,59 +17,135 @@ class AskMeSection extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    const { name, message } = this.state;
-    const subject = `Message from ${name}`;
-    const body = `Name: ${name}%0D%0AMessage: ${message}`;
-    window.location.href = `mailto:dkarthikeya888@gmail.com?subject=${subject}&body=${body}`;
+    this.setState({ isSubmitting: true, error: null });
+
+    const formData = new FormData(event.target);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/dkarthikeya888@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.success) {
+        this.setState({
+          isSuccess: true,
+          isSubmitting: false,
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
+    } catch (error) {
+      this.setState({
+        error: error.message,
+        isSubmitting: false,
+      });
+    }
   };
 
   render() {
-    const { name, message } = this.state;
+    const { name, email, subject, message, isSubmitting, isSuccess, error } =
+      this.state;
+
     return (
-      <section id="ask-me">
-        <h3>
-          <b>Let's Connect</b>
-        </h3>
-        <p style={{ font: "italic 20px Lora" }}>
+      <section id="ask-me" className="ask-me-section">
+        <h3>Let's Connect</h3>
+        <p className="section-description">
           I'm open for freelancing! 🚀 Need a{" "}
-          <b style={{ font: "bold italic 22px Lora" }}>full-stack app</b> built
-          from the ground up with{" "}
-          <b style={{ font: "bold italic 22px Constantia" }}>
-            {" "}
-            React, Node & Mongo or SQL?
-          </b>{" "}
+          <span className="highlight">full-stack app</span> built from the
+          ground up with{" "}
+          <span className="tech-stack">React/Next, Node & Mongo or SQL?</span>
           Let me turn your vision into a scalable, high-performance reality —
           tailored just for you! Let's build something amazing together. 💡✨
         </p>
-        <br />
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="name">Name:</label>
+
+        {isSuccess && (
+          <div className="success-message">
+            Thank you! Your message has been sent successfully.
+          </div>
+        )}
+
+        {error && (
+          <div className="error-message">
+            Error: {error}. Please try again or email directly at
+            dkarthikeya888@gmail.com
+          </div>
+        )}
+
+        <form onSubmit={this.handleSubmit} className="contact-form">
+          <input type="hidden" name="_captcha" value="false" />
           <input
-            type="text"
-            id="name"
-            cols="10"
-            name="name"
-            value={name}
-            onChange={this.handleInputChange}
-            required
+            type="hidden"
+            name="_subject"
+            value="New contact form submission"
           />
-          <br />
-          <div>
-            <label htmlFor="summary">Message:</label>
-            <br />
+
+          <div className="form-group">
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleInputChange}
+              required
+              placeholder="Your Name"
+              className="form-input"
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.handleInputChange}
+              required
+              placeholder="Your Gmail"
+              className="form-input"
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              type="text"
+              name="subject"
+              value={subject}
+              onChange={this.handleInputChange}
+              required
+              placeholder="Subject"
+              className="form-input"
+            />
+          </div>
+
+          <div className="form-group">
             <textarea
-              id="summary"
               name="message"
-              rows="6"
-              cols="58"
               value={message}
               onChange={this.handleInputChange}
               required
+              placeholder="Your Message"
+              className="form-textarea"
             />
           </div>
-          <button type="submit">Send Mail</button>
+          <div className="button-container">
+            <button
+              type="submit"
+              className="submit-button"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+          </div>
         </form>
       </section>
     );

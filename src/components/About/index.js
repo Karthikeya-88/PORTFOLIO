@@ -7,6 +7,9 @@ const About = () => {
     "a MERN Stack Developer",
     "an Application Developer",
     "a React Native Developer",
+    "a Web Developer",
+    "a Backend Developer",
+    "a Frontend Developer",
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -30,7 +33,7 @@ const About = () => {
     } else {
       if (displayText.length > 0) {
         const timeoutId = setTimeout(() => {
-          setDisplayText(currentText.slice(0, displayText.length - 1));
+          setDisplayText(currentText.slice(0, displayText.length - 1.4));
         }, timeout);
         return () => clearTimeout(timeoutId);
       } else {

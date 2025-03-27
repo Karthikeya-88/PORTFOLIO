@@ -1,99 +1,155 @@
-#ask-me {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.ask-me-section {
   width: 100%;
-  box-sizing: border-box;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "Lora", serif;
 }
 
-#ask-me h2 {
+.content-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section-title {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
 }
 
-#ask-me p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
+.highlight {
+  color: #00ffb3;
+  text-shadow: -2px 1px #000;
+  font-weight: 800;
 }
 
-#ask-me form {
+.tech-stack {
+  font-style: italic;
+  font-weight: 1000;
+  color: #fbff00af;
+  box-shadow: 1px 4px 4px 2px #2d2d2d;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-row {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
-#ask-me label {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-#ask-me input[type="text"] {
+.form-group {
+  margin-bottom: 1.5rem;
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
-#ask-me textarea {
+.form-input,
+.form-textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-textarea {
+  min-height: 150px;
   resize: vertical;
 }
 
-#ask-me button {
-  padding: 10px 20px;
-  align-self: center;
-  background-color: white;
-  color: #007bff;
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.8rem 2.5rem;
   border: none;
-  border-radius: 60px;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
 }
 
-#ask-me button:hover {
-  text-shadow: 1px 1px #fff;
-  color: #000;
-  font-size: 20px;
+.submit-button:hover {
+  background-color: #3498db;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  #ask-me {
-    padding: 10px;
-    width: fit-content;
+@media (min-width: 768px) {
+  .ask-me-section {
+    padding: 3rem 2rem;
   }
 
-  #ask-me h2 {
-    font-size: 1.5rem;
+  .content-container {
+    max-width: 700px;
   }
 
-  #ask-me p {
-    font-size: 0.9rem;
+  .section-title {
+    font-size: 2.5rem;
   }
 
-  #ask-me input[type="text"],
-  #ask-me textarea {
-    font-size: 0.9rem;
-    padding: 8px;
+  .section-description {
+    font-size: 1.2rem;
   }
 
-  #ask-me button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+  .form-row {
+    flex-direction: row;
+  }
+
+  .form-group {
+    flex: 1;
   }
 }
 
-@media (max-width: 460px) {
-  #ask-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    width: 98vw;
+@media (min-width: 1024px) {
+  .ask-me-section {
+    padding: 4rem 0;
+  }
+
+  .content-container {
+    max-width: 900px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 1rem;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .submit-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
   }
 }

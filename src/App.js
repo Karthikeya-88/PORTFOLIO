@@ -4,7 +4,7 @@ import { MdEmail, MdOutlineCall } from "react-icons/md";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { VscGithub } from "react-icons/vsc";
-import { LiaCopyrightSolid } from "react-icons/lia";
+import { LuCopyright } from "react-icons/lu";
 import AskMeSection from "./components/Askme";
 import Skills from "./components/Skills";
 
@@ -127,6 +127,15 @@ function App() {
                       id="navbar-hire-me"
                     >
                       My Certifications
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      className="local-anchor-el nav-link"
+                      href="#askMe"
+                      id="navbar-hire-me"
+                    >
+                      Let's Connect
                     </a>
                   </li>
                   <li className="nav-item">
@@ -273,7 +282,6 @@ function App() {
           </div>
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-
         <div className="mb-0 p-4" id="myProjects">
           <h2 className="text-center text-info">My Projects</h2>
           <ProjectFilter />
@@ -346,7 +354,7 @@ function App() {
           </div>
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <div>
+        <div className="mt-0 pt-0" id="askMe">
           <AskMeSection
             className="m-2 section-hidden"
             ref={(el) => (sectionRefs.current[5] = el)}
@@ -397,7 +405,7 @@ function App() {
           <p style={{ fontFamily: "Perpetua" }}>
             Copyright{" "}
             <span>
-              <LiaCopyrightSolid />{" "}
+              <LuCopyright style={{ marginBottom: "4px" }} />{" "}
             </span>{" "}
             2025 Karthikeya. All rights reserved.
           </p>
