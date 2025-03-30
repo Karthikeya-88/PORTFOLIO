@@ -60,7 +60,7 @@ class AskMeSection extends Component {
 
     return (
       <section id="ask-me" className="ask-me-section">
-        <h3>Let's Connect</h3>
+        <h2 className="text-center">Let's Connect</h2>
         <p className="section-description">
           I'm open for freelancing! 🚀 Need a{" "}
           <span className="highlight">full-stack app</span> built from the

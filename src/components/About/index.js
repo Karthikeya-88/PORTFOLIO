@@ -7,7 +7,6 @@ const About = () => {
     "a MERN Stack Developer",
     "an Application Developer",
     "a React Native Developer",
-    "a Web Developer",
     "a Backend Developer",
     "a Frontend Developer",
   ];

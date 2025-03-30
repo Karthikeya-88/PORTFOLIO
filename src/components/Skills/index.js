@@ -57,7 +57,7 @@ const Skills = () => {
 
   return (
     <div className="my-skills-container mb-2 p-4" id="mySkills">
-      <h2 className="text-center text-info mb-4">My Skills</h2>
+      <h2 className="text-center text-info mb-4">Skills </h2>
       <div className="row">
         {skillsData.map((category, index) => (
           <div key={index} className="col-md-6 col-lg-4 mb-4">

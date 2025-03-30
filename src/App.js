@@ -1,7 +1,7 @@
 import React from "react";
 import { IoNavigate } from "react-icons/io5";
-import { MdEmail, MdOutlineCall } from "react-icons/md";
-import { LiaLaptopCodeSolid } from "react-icons/lia";
+import { MdEmail } from "react-icons/md";
+import { PiCodeThin } from "react-icons/pi";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { VscGithub } from "react-icons/vsc";
 import { LuCopyright } from "react-icons/lu";
@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ProjectFilter from "./components/Projects";
 import useSectionObserver from "./components/ToggleVisibilty";
 import About from "./components/About";
+import Certifications from "./components/Certifications";
 
 function App() {
   const sectionRefs = useSectionObserver();
@@ -27,21 +28,11 @@ function App() {
               className="my-name name-reveal"
               style={{ fontFamily: "Perpetua" }}
             >
-              <LiaLaptopCodeSolid style={{ marginRight: "20px" }} />
               <span data-text="Karthikeya">Karthikeya </span>
               <span data-text="Doosa">Doosa </span>
+              <PiCodeThin style={{ marginRight: "20px", width: "30px" }} />
             </h1>
             <div className="d-flex align-items-center">
-              <button
-                className="btn btn-primary me-3"
-                onClick={() => {
-                  document
-                    .querySelector("#hireMe")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Hire Me
-              </button>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -50,7 +41,12 @@ function App() {
                 aria-controls="offcanvasNavbar"
                 aria-label="Toggle navigation"
               >
-                <span className="navbar-toggler-icon"></span>
+                <span>
+                  <i
+                    class="fas fa-bars"
+                    style={{ color: "#f0f0f0", fontSize: "28px" }}
+                  ></i>
+                </span>
               </button>
             </div>
             <div
@@ -78,7 +74,7 @@ function App() {
                       href="#aboutMe"
                       id="navbar-about"
                     >
-                      About Me
+                      Get to Know Me 🌟
                     </a>
                   </li>
                   <li className="nav-item">
@@ -88,7 +84,7 @@ function App() {
                       href="#mySkills"
                       id="navbar-skills"
                     >
-                      My Skills
+                      What I’m Good At 🔥
                     </a>
                   </li>
                   <li className="nav-item">
@@ -97,7 +93,7 @@ function App() {
                       href="#myResume"
                       id="navbar-resume"
                     >
-                      Check My Resume
+                      Grab My Resume 📥
                     </a>
                   </li>
 
@@ -108,7 +104,7 @@ function App() {
                       href="#myExperience"
                       id="navbar-skills"
                     >
-                      Experience
+                      My Work Journey 📜
                     </a>
                   </li>
                   <li className="nav-item">
@@ -117,7 +113,7 @@ function App() {
                       href="#myProjects"
                       id="navbar-projects"
                     >
-                      My Projects
+                      Things I’ve Built 🛠️
                     </a>
                   </li>
                   <li className="nav-item">
@@ -126,7 +122,7 @@ function App() {
                       href="#myCert"
                       id="navbar-hire-me"
                     >
-                      My Certifications
+                      My Learning Badges �
                     </a>
                   </li>
                   <li className="nav-item">
@@ -135,7 +131,7 @@ function App() {
                       href="#askMe"
                       id="navbar-hire-me"
                     >
-                      Let's Connect
+                      Connect with ME 💬
                     </a>
                   </li>
                   <li className="nav-item">
@@ -144,7 +140,7 @@ function App() {
                       href="#hireMe"
                       id="navbar-hire-me"
                     >
-                      Want to Hire me
+                      Need My Skills? 💼
                     </a>
                   </li>
                 </ul>
@@ -158,7 +154,7 @@ function App() {
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <Skills
           className="section-hidden"
-          ref={(el) => (sectionRefs.current[4] = el)}
+          ref={(el) => (sectionRefs.current[0] = el)}
         />
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div
@@ -166,7 +162,7 @@ function App() {
           id="myResume"
           style={{ width: "94vw" }}
         >
-          <h2 className="text-center text-info">My Resume</h2>
+          <h2 className="text-center text-info">Resume</h2>
           <div
             style={{
               backgroundColor: "rgba(246, 246, 200, 0.9)",
@@ -293,18 +289,17 @@ function App() {
           </div>
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <div className="mb-0 p-4" id="myProjects">
-          <h2 className="text-center text-info">My Projects</h2>
+        <div className="mb-0 p-2" id="myProjects">
+          <h2 className="text-center text-info">Projects</h2>
           <ProjectFilter />
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div
-          className="mb-2 section-hidden"
+          className="mb-2"
           id="myCert"
-          style={{ width: "94vw" }}
-          ref={(el) => (sectionRefs.current[1] = el)}
+          style={{ width: "96vw", flexWrap: "wrap" }}
         >
-          <h2 className="text-center">My Certifications</h2>
+          <h2 className="text-center">Certifications</h2>
           <div
             className="p-4 rounded border border-dark text-dark"
             style={{
@@ -313,59 +308,7 @@ function App() {
               border: "1px solid rgba(255, 255, 255, 0.3)",
             }}
           >
-            <div className="cert-container">
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1735840048/Screenshot_1099_m8bbkf.png"
-                alt="IRC"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1735840467/Screenshot_1100_tb3izq.png"
-                alt="React"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1735840499/Screenshot_1103_pktdia.png"
-                alt="Node"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1735840532/Screenshot_1104_ocewaj.png"
-                alt="Javascript"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1736395354/Screenshot_1113_zdqxtx.png"
-                alt="Dynamic web application"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1736395265/Screenshot_1112_bv7wda.png"
-                alt="Developer foundations"
-                className="cert-images"
-              />
-
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1735840562/Screenshot_1101_w9wwmb.png"
-                alt="Programming with Python"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1735840597/Screenshot_1102_mwwqvt.png"
-                alt="Sql database"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1739202289/Screenshot_1159_g9nela.png"
-                alt="Responsive web application"
-                className="cert-images"
-              />
-              <img
-                src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1739168961/Screenshot_1156_m4mwqc.png"
-                alt="Static web application"
-                className="cert-images"
-              />
-            </div>
+            <Certifications />
           </div>
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
@@ -385,11 +328,6 @@ function App() {
         >
           <h2 className="text-center text-info">Want to Hire Me</h2>
           <div className="button-icons-container mt-4">
-            <button type="button" className="button-icons">
-              <a className="anchor-el" href="tel:9182318580">
-                <MdOutlineCall />
-              </a>
-            </button>
             <button type="button" className="button-icons">
               <a className="anchor-el" href="mailto:dkarthikeya888@gmail.com">
                 <MdEmail />
