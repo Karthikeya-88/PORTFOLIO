@@ -61,7 +61,7 @@ body {
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0)
   );
-  animation: pulse 3s infinite;
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
@@ -119,7 +119,7 @@ body {
   }
 
   .animated-text {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
   }
 

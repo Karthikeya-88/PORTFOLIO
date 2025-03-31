@@ -152,10 +152,7 @@ function App() {
           <About />
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
-        <Skills
-          className="section-hidden"
-          ref={(el) => (sectionRefs.current[0] = el)}
-        />
+        <Skills style={{ width: "98vw" }} />
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div
           className="mb-2 text-black"
@@ -213,9 +210,9 @@ function App() {
         >
           <h2 className="text-center text-info">Experience</h2>
           <div
-            className="rounded border border-light p-2"
+            className="rounded border border-light p-3"
             style={{
-              backgroundColor: "#e1f1fa",
+              backgroundColor: "#cad8e1",
               boxShadow: "0 8px 32px rgba(0,0,0,0.05)",
               transform: "translateZ(0)",
             }}

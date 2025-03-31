@@ -60,9 +60,9 @@ const About = () => {
             I am <span className="text-slider">{displayText}</span>
           </h1>
           <p className="about-paragraph">
-            With a B.Com in <b>Computer Applications</b>, I combine
-            human-centric strategies with technical expertise. Trained in
-            Nxtwave’s <strong>MERN stack</strong>, I build scalable,
+            I'm Karthikeya, With a B.Com in <b>Computer Applications</b>, I
+            combine human-centric strategies with technical expertise. Trained
+            in Nxtwave’s <strong>MERN stack</strong>, I build scalable,
             user-focused solutions, mastering tools like Git, CLI, and core CS
             concepts. Skilled in problem-solving, I craft intuitive software by
             refining frontend interfaces and optimizing backend systems. I aim

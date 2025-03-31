@@ -65,7 +65,9 @@ class AskMeSection extends Component {
           I'm open for freelancing! 🚀 Need a{" "}
           <span className="highlight">full-stack app</span> built from the
           ground up with{" "}
-          <span className="tech-stack">React/Next, Node & Mongo or SQL?</span>
+          <span className="tech-stack">
+            Node.js - React.js/Next - MongoDB/SQL?
+          </span>{" "}
           Let me turn your vision into a scalable, high-performance reality —
           tailored just for you! Let's build something amazing together. 💡✨
         </p>
