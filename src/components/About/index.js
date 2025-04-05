@@ -44,8 +44,14 @@ const About = () => {
 
   return (
     <div className="home-container">
-      <h2 className="text-center text-info mb-4">About Me</h2>
-      <div className="hero-section">
+      <div className="text-center mb-4 position-relative">
+        <h2 className="text-center text-info">About Me</h2>
+        <div
+          className="signature-underline"
+          style={{ backgroundColor: "#1795b8" }}
+        ></div>
+      </div>
+      <div className="hero-section" style={{ width: "88vw" }}>
         <div className="hero-image mobile-image">
           <div className="image-wrapper">
             <img
@@ -60,8 +66,8 @@ const About = () => {
             I am <span className="text-slider">{displayText}</span>
           </h1>
           <p className="about-paragraph">
-            I'm Karthikeya, With a B.Com in <b>Computer Applications</b>, I
-            combine human-centric strategies with technical expertise. Trained
+            I'm Karthikeya Doosa, With a B.Com in <b>Computer Applications</b>,
+            I combine human-centric strategies with technical expertise. Trained
             in Nxtwave’s <strong>MERN stack</strong>, I build scalable,
             user-focused solutions, mastering tools like Git, CLI, and core CS
             concepts. Skilled in problem-solving, I craft intuitive software by

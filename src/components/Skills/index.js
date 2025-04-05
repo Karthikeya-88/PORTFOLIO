@@ -17,7 +17,7 @@ const Skills = () => {
     },
     {
       category: "Backend",
-      skills: ["Python", "Node", "Java", "JavaScript", "Express.js"],
+      skills: ["Python", "Node", "Java", "Javascript", "Express.js"],
       icon: "fas fa-server",
       color: "#68A063",
     },
@@ -26,6 +26,12 @@ const Skills = () => {
       skills: ["SQL", "MongoDB", "Supabase"],
       icon: "fas fa-database",
       color: "#4DB33D",
+    },
+    {
+      category: "UI/UX Design",
+      skills: ["Figma", "User Research", "Prototyping"],
+      icon: "fas fa-paint-brush",
+      color: "#FF6B6B",
     },
     {
       category: "Tools & Technologies",
@@ -43,12 +49,12 @@ const Skills = () => {
     {
       category: "Familiar With",
       skills: [
-        "Figma",
         "Code Sandbox",
         "Docker",
-        "Vercel & Netlify",
-        "Next.js",
-        "TailwindCSS",
+        "Vercel",
+        "Netlify",
+        "Next",
+        "Tailwind",
       ],
       icon: "fas fa-lightbulb",
       color: "#FFD700",
@@ -57,7 +63,14 @@ const Skills = () => {
 
   return (
     <div className="my-skills-container mb-2 p-4" id="mySkills">
-      <h2 className="text-center text-info mb-4">Skills </h2>
+      <div className="text-center mb-4 position-relative">
+        <h2 className="text-center text-info">Skills</h2>
+        <div
+          className="signature-underline"
+          style={{ backgroundColor: "#1795b8" }}
+        ></div>
+      </div>
+
       <div className="row">
         {skillsData.map((category, index) => (
           <div key={index} className="col-md-6 col-lg-4 mb-4">
@@ -81,7 +94,9 @@ const Skills = () => {
                     data-bs-placement="top"
                   >
                     <i
-                      className={`fab fa-${skill.toLowerCase()} me-2`}
+                      className={`fab fa-${
+                        skill.toLowerCase().split(" ")[0]
+                      } me-2`}
                       style={{ color: category.color }}
                     ></i>
                     {skill}

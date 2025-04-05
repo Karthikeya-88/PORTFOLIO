@@ -141,11 +141,11 @@ h2 {
 }
 
 .ultimate-container {
-  background: linear-gradient(to right, #0f172a 40%, #4a2c6f 80%, #3a86ff 98%);
+  background: linear-gradient(to left, #0f172a 58%, #4f446f 74%, #415f8f 88%);
+  animation: gradientShift 4s ease-in-out infinite !important;
   color: #ffffff;
   align-items: center;
   background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite !important;
 }
 
 @keyframes gradientShift {

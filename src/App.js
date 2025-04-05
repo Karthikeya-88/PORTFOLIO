@@ -29,7 +29,6 @@ function App() {
               style={{ fontFamily: "Perpetua" }}
             >
               <span data-text="Karthikeya">Karthikeya </span>
-              <span data-text="Doosa">Doosa </span>
               <PiCodeThin style={{ marginRight: "20px", width: "30px" }} />
             </h1>
             <div className="d-flex align-items-center">
@@ -159,7 +158,13 @@ function App() {
           id="myResume"
           style={{ width: "94vw" }}
         >
-          <h2 className="text-center text-info">Resume</h2>
+          <div className="text-center mb-4 position-relative">
+            <h2 className="text-center text-info">Resume</h2>
+            <div
+              className="signature-underline"
+              style={{ backgroundColor: "#1795b8" }}
+            ></div>
+          </div>
           <div
             style={{
               backgroundColor: "rgba(246, 246, 200, 0.9)",
@@ -208,7 +213,13 @@ function App() {
           id="myExperience"
           style={{ width: "96vw" }}
         >
-          <h2 className="text-center text-info">Experience</h2>
+          <div className="text-center mb-4 position-relative">
+            <h2 className="text-center text-info">Experience</h2>
+            <div
+              className="signature-underline"
+              style={{ backgroundColor: "#1795b8" }}
+            ></div>
+          </div>
           <div
             className="rounded border border-light p-3"
             style={{
@@ -287,7 +298,13 @@ function App() {
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div className="mb-0 p-2" id="myProjects">
-          <h2 className="text-center text-info">Projects</h2>
+          <div className="text-center mb-4 position-relative">
+            <h2 className="text-center text-info">Projects</h2>
+            <div
+              className="signature-underline"
+              style={{ backgroundColor: "#1795b8" }}
+            ></div>
+          </div>
           <ProjectFilter />
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
@@ -296,7 +313,13 @@ function App() {
           id="myCert"
           style={{ width: "96vw", flexWrap: "wrap" }}
         >
-          <h2 className="text-center">Certifications</h2>
+          <div className="text-center mb-4 position-relative">
+            <h2 className="text-center text-info">Certifications</h2>
+            <div
+              className="signature-underline"
+              style={{ backgroundColor: "#1795b8" }}
+            ></div>
+          </div>
           <div
             className="p-4 rounded border border-dark text-dark"
             style={{
@@ -323,7 +346,13 @@ function App() {
             border: "2.8px solid rgba(255, 255, 255, 0.3)",
           }}
         >
-          <h2 className="text-center text-info">Want to Hire Me</h2>
+          <div className="text-center mb-4 position-relative">
+            <h2 className="text-center text-info">Want to Hire Me</h2>
+            <div
+              className="signature-underline"
+              style={{ backgroundColor: "#1795b8" }}
+            ></div>
+          </div>
           <div className="button-icons-container mt-4">
             <button type="button" className="button-icons">
               <a className="anchor-el" href="mailto:dkarthikeya888@gmail.com">

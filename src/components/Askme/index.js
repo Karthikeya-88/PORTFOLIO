@@ -60,7 +60,13 @@ class AskMeSection extends Component {
 
     return (
       <section id="ask-me" className="ask-me-section">
-        <h2 className="text-center">Let's Connect</h2>
+        <div className="text-center mb-4 position-relative">
+          <h2 className="text-center text-info">Let's Connect</h2>
+          <div
+            className="signature-underline"
+            style={{ backgroundColor: "#1795b8" }}
+          ></div>
+        </div>
         <p className="section-description">
           I'm open for freelancing! 🚀 Need a{" "}
           <span className="highlight">full-stack app</span> built from the
