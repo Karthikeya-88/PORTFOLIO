@@ -417,9 +417,9 @@ h2 {
   justify-content: space-around;
   align-items: center;
   width: 92vw;
-  background: #000;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  background: #41436780;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
   background-size: cover;
   margin-bottom: 0px;
 }

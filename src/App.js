@@ -1,9 +1,6 @@
 import React from "react";
 import { IoNavigate } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 import { PiCodeThin } from "react-icons/pi";
-import { BiLogoLinkedinSquare } from "react-icons/bi";
-import { VscGithub } from "react-icons/vsc";
 import { LuCopyright } from "react-icons/lu";
 import AskMeSection from "./components/Askme";
 import Skills from "./components/Skills";
@@ -15,6 +12,8 @@ import ProjectFilter from "./components/Projects";
 import useSectionObserver from "./components/ToggleVisibilty";
 import About from "./components/About";
 import Certifications from "./components/Certifications";
+import Experience from "./components/Experience";
+import HireMe from "./components/HireMe";
 
 function App() {
   const sectionRefs = useSectionObserver();
@@ -220,81 +219,7 @@ function App() {
               style={{ backgroundColor: "#1795b8" }}
             ></div>
           </div>
-          <div
-            className="rounded border border-light p-3"
-            style={{
-              backgroundColor: "#cad8e1",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.05)",
-              transform: "translateZ(0)",
-            }}
-          >
-            <div className="text-center pl-4 pr-4 p-3 w-100">
-              <h4 className="experience-header">
-                <b>Teaching Assistant - Nxtwave</b>
-              </h4>
-            </div>
-            <ul
-              style={{
-                listStyle: "disc",
-              }}
-              className="text-black"
-            >
-              <li
-                className="experience-li"
-                style={{
-                  paddingBottom: "10px",
-                  lineHeight: "1.6",
-                  font: "20px Garamond, Perpetua",
-                }}
-              >
-                As a Teaching Assistant for CCBPian learners, I provided
-                hands-on support in mastering the MERN stack, Programming with
-                Python and Querying with SQL. My role involved breaking down
-                complex concepts, debugging code, and equipping students with
-                practical strategies to tackle technical challenges
-                independently.
-              </li>
-              <li
-                className="experience-li"
-                style={{
-                  paddingBottom: "10px",
-                  lineHeight: "1.6",
-                  font: "20px Garamond, Perpetua",
-                }}
-              >
-                I focused on nurturing critical thinking by guiding learners to
-                diagnose issues and refine their coding approaches. Through
-                collaborative troubleshooting and clear communication, I helped
-                students build confidence in their ability to solve problems and
-                deliver functional solutions.
-              </li>
-            </ul>
-            <div className="text-justify">
-              <h4 style={{ color: "#4445ea", fontFamily: "Lora" }}>
-                <b>Skills Acquired:</b>
-              </h4>
-              <ol
-                style={{
-                  font: "20px Garamond, Perpetua",
-                }}
-                className="text-dark"
-              >
-                {" "}
-                <li style={{ paddingBottom: "10px" }}>
-                  Debugging & troubleshooting
-                </li>
-                <li style={{ paddingBottom: "10px" }}>
-                  Addressed full-stack queries with precision
-                </li>
-                <li style={{ paddingBottom: "10px" }}>
-                  Problem-solving & analytical thinking
-                </li>{" "}
-                <li style={{ paddingBottom: "10px" }}>
-                  Professional and a refined touch of formal response
-                </li>
-              </ol>
-            </div>
-          </div>
+          <Experience />
         </div>
         <hr style={{ width: "80%", border: "2px solid seashell" }} />
         <div className="mb-0 p-2" id="myProjects">
@@ -341,7 +266,6 @@ function App() {
           id="hireMe"
           style={{
             backdropFilter: "blur(8px)",
-            background: "rgba(255, 255, 255, 0.9)",
             borderRadius: "20px",
             border: "2.8px solid rgba(255, 255, 255, 0.3)",
           }}
@@ -353,26 +277,7 @@ function App() {
               style={{ backgroundColor: "#1795b8" }}
             ></div>
           </div>
-          <div className="button-icons-container mt-4">
-            <button type="button" className="button-icons">
-              <a className="anchor-el" href="mailto:dkarthikeya888@gmail.com">
-                <MdEmail />
-              </a>
-            </button>
-            <button type="button" className="button-icons">
-              <a
-                className="anchor-el"
-                href="http://www.linkedin.com/in/karthikeya-doosa-210a42244"
-              >
-                <BiLogoLinkedinSquare />
-              </a>
-            </button>
-            <button type="button" className="button-icons">
-              <a className="anchor-el" href="https://github.com/Karthikeya-88">
-                <VscGithub />
-              </a>
-            </button>
-          </div>
+          <HireMe />
         </div>
         <div
           className="text-center text-white m-0 p-0 d-flex justify-content-center align-items-center section-hidden"

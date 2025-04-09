@@ -48,10 +48,10 @@
   padding: 12px 24px;
   font-size: 20px;
   font-weight: bold;
-  color: #bebdbd;
+  color: wheat;
   background: transparent;
-  border: 1px solid #fff;
-  border-radius: 24px;
+  border: 2px solid snow;
+  border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
   transition: color 0.8s ease-in-out;
@@ -75,7 +75,7 @@
 .full-stack-filter-btn:hover {
   color: #fff;
   text-shadow: -1px 0px #646464;
-  border: 1px solid cyan;
+  border: 2px solid cyan;
 }
 
 .full-stack-filter-btn span {
@@ -101,7 +101,7 @@
 .react-filter-btn:hover {
   color: #fff;
   text-shadow: -1px 0px #6d6d6d;
-  border: 1px solid orange;
+  border: 2px solid orange;
 }
 
 .react-filter-btn span {
@@ -127,7 +127,7 @@
 .node-filter-btn:hover {
   color: #fff;
   text-shadow: -1px px #6d6d6d;
-  border: 1px solid lime;
+  border: 2px solid lime;
 }
 
 .node-filter-btn span {
@@ -153,7 +153,7 @@
 .react-native-filter-btn:hover {
   color: #fff;
   text-shadow: -1px 0px #6d6d6d;
-  border: 1px solid purple;
+  border: 2px solid purple;
 }
 
 .react-native-filter-btn span {
@@ -178,7 +178,7 @@
     font-weight: bold;
     color: white;
     background: transparent;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     cursor: pointer;
     gap: 20px;
     overflow: hidden;

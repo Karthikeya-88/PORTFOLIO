@@ -185,28 +185,30 @@ const ProjectFilter = () => {
     <div>
       <div className="filter-options">
         <button
-          className="react-native-filter-btn"
-          onClick={() => setSelectedCategory("React Native")}
-        >
-          <span>React Native</span>
-        </button>
-        <button
           className="full-stack-filter-btn"
           onClick={() => setSelectedCategory("Full Stack")}
         >
           <span>Full Stack</span>
         </button>
+
         <button
           className="node-filter-btn"
           onClick={() => setSelectedCategory("NodeJS")}
         >
-          <span>Node.JS</span>
+          <span>Node.js</span>
         </button>
+
         <button
           className="react-filter-btn"
           onClick={() => setSelectedCategory("ReactJS")}
         >
-          <span>React.JS</span>
+          <span>React.js</span>
+        </button>
+        <button
+          className="react-native-filter-btn"
+          onClick={() => setSelectedCategory("React Native")}
+        >
+          <span>React Native</span>
         </button>
       </div>
 
@@ -221,12 +223,12 @@ const ProjectFilter = () => {
                 }}
               >
                 {project.category === "Full Stack"
-                  ? "Full-Stack Application:"
+                  ? "Full-Stack Project:"
                   : project.category === "ReactJS"
-                  ? "React JS App:"
+                  ? "React JS Application:"
                   : project.category === "React Native"
-                  ? "React Native App:"
-                  : "Node JS Project:"}
+                  ? "React Native Project:"
+                  : "Node JS Application:"}
               </span>{" "}
               {project.title}{" "}
               {project.github && (
