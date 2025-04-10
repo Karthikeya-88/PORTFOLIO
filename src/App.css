@@ -17,7 +17,11 @@
   font-size: medium;
 }
 
-#navbar-resume {
+#navbar-experience {
+  font-size: medium;
+}
+
+#navbar-certifications {
   font-size: medium;
 }
 
@@ -26,32 +30,32 @@
 }
 
 #navbar-about:hover {
-  font-size: larger;
-  color: #000;
+  color: #ff004c;
   font-weight: bold;
 }
 
 #navbar-skills:hover {
-  font-size: larger;
-  color: #000;
+  color: #ff004c;
   font-weight: bold;
 }
 
 #navbar-projects:hover {
-  font-size: larger;
-  color: #000;
+  color: #ff004c;
   font-weight: bold;
 }
 
-#navbar-resume:hover {
-  font-size: larger;
-  color: #000;
+#navbar-experience:hover {
+  color: #ff004c;
+  font-weight: bold;
+}
+
+#navbar-certifications:hover {
+  color: #ff004c;
   font-weight: bold;
 }
 
 #navbar-hire-me:hover {
-  font-size: larger;
-  color: #000;
+  color: #ff004c;
   font-weight: bold;
 }
 
@@ -67,15 +71,6 @@
 .local-anchor-el {
   font-family: "Bree serif";
   font-size: xxx-large;
-}
-
-.resume-el {
-  color: springgreen;
-  font-size: 28px;
-}
-
-.resume-el:hover {
-  color: gold;
 }
 
 .project-image:hover {

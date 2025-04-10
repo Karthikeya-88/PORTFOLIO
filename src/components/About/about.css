@@ -149,3 +149,8 @@ body {
     margin-right: 0;
   }
 }
+
+.hire-download-button:hover {
+  background-color: #0052e0d3 !important;
+  border: 0 !important;
+}

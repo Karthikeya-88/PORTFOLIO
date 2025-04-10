@@ -87,6 +87,29 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="flex align-items-center">
+        <a
+          href="#hireMe"
+          className="text-white btn btn-success"
+          style={{ textDecoration: "none", marginRight: "20px" }}
+        >
+          Hire Me
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1CdJGVegQ71k6Zx-EyZG3vRUaxVmlk3-x/view?usp=sharing"
+          className="text-white hire-download-button"
+          style={{
+            textDecoration: "none",
+            background: "transparent",
+            border: "1px solid #fff",
+            borderRadius: "10px",
+            padding: "13px 10px",
+            margin: "20px 0px 0px",
+          }}
+        >
+          Download Resume
+        </a>
+      </div>
     </div>
   );
 };
