@@ -123,7 +123,7 @@ const projects = [
       "Backend: Supabase with secure auth",
     ],
     github:
-      "https://expo.dev/accounts/karthikeya_d88/projects/linkup-social-media-app/builds/145ad5fb-1485-430a-92d0-04136246d19d",
+      "https://drive.google.com/file/d/1jSHqCvq6EcPmtzPy6gsXlSdzuuqUShMM/view?usp=sharing",
   },
   {
     id: 11,
