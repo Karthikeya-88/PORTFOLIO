@@ -61,10 +61,13 @@ class HireMeSection extends Component {
       this.state;
 
     return (
-      <section id="hireMe" style={{ border: "0" }}>
+      <section id="hireMe">
         <div className="hire-me-container">
           <div className="contact-info-side">
-            <p className="section-description text-white">
+            <p
+              className="section-description text-white"
+              style={{ fontSize: "18px" }}
+            >
               I'm open for full-time / part-time / contract / freelancing! 🚀
               Need a{" "}
               <span
@@ -110,7 +113,6 @@ class HireMeSection extends Component {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="contact-form-side">
             {isSuccess && (
               <div className="success-message">

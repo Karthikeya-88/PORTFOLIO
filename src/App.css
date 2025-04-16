@@ -1,62 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700;900&family=Dancing+Script:wght@700&family=Roboto+Flex:wght@400;700&family=Manrope:wght@500;800&family=Raleway:wght@600;800&display=swap");
 
 .App {
   text-align: center;
 }
 
 #navbar-about {
-  font-size: medium;
+  font-size: 1.1pc;
   color: #fff;
+  font-weight: bold;
 }
 
 #navbar-skills {
-  font-size: medium;
+  font-size: 1.1pc;
+  font-weight: bold;
 }
 
 #navbar-projects {
-  font-size: medium;
+  font-size: 1.1pc;
+  font-weight: bold;
 }
 
 #navbar-experience {
-  font-size: medium;
+  font-size: 1.1pc;
+  font-weight: bold;
 }
 
 #navbar-certifications {
-  font-size: medium;
+  font-size: 1.1pc;
+  font-weight: bold;
 }
 
 #navbar-hire-me {
-  font-size: medium;
+  font-size: 1.1pc;
+  font-weight: bold;
 }
 
 #navbar-about:hover {
   color: #ff004c;
-  font-weight: bold;
 }
 
 #navbar-skills:hover {
   color: #ff004c;
-  font-weight: bold;
 }
 
 #navbar-projects:hover {
   color: #ff004c;
-  font-weight: bold;
 }
 
 #navbar-experience:hover {
   color: #ff004c;
-  font-weight: bold;
 }
 
 #navbar-certifications:hover {
   color: #ff004c;
-  font-weight: bold;
 }
 
 #navbar-hire-me:hover {
   color: #ff004c;
-  font-weight: bold;
 }
 
 .anchor-el {
@@ -136,7 +136,7 @@ h2 {
 }
 
 .ultimate-container {
-  background: linear-gradient(to left, #0f172a 58%, #4f446f 74%, #415f8f 88%);
+  background: linear-gradient(to left, #0f172a 58%, #1a0d40 74%, #1c3b6c 88%);
   animation: gradientShift 4s ease-in-out infinite !important;
   color: #ffffff;
   align-items: center;
@@ -203,10 +203,9 @@ h2 {
 }
 
 .my-name {
-  font-size: 2.4pc;
+  font-size: 2.2pc;
   font-weight: bold;
   color: #fff;
-
   transition: text-shadow 0.4s ease;
 }
 

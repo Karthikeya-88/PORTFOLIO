@@ -55,7 +55,7 @@ const About = () => {
         <div className="hero-image mobile-image">
           <div className="image-wrapper">
             <img
-              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1742632927/IMG_20230106_135825-2_lykx0h.jpg"
+              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1744805933/IMG_20230106_135825-3_uthsft.jpg"
               alt="Karthikeya D"
             />
             <div className="image-animation"></div>
@@ -96,7 +96,7 @@ const About = () => {
           Hire Me
         </a>
         <a
-          href="https://drive.google.com/file/d/1CdJGVegQ71k6Zx-EyZG3vRUaxVmlk3-x/view?usp=sharing"
+          href="https://drive.google.com/file/d/1CdJGVegQ71k6Zx-EyZG3vRUaxVmlk3-x/view?usp=drive_link"
           className="text-white hire-download-button"
           style={{
             textDecoration: "none",

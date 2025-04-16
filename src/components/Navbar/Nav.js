@@ -9,7 +9,7 @@ const Nav = () => {
           <PiCodeThin style={{ marginRight: "20px", width: "30px" }} />
         </h1>
         <div className="d-none d-md-flex align-items-center">
-          <ul className="navbar-nav flex-row">
+          <ul className="navbar-nav flex-row nav-n">
             <li className="nav-item mx-2">
               <a
                 className="local-anchor-el nav-link"
@@ -61,7 +61,7 @@ const Nav = () => {
                 href="#hireMe"
                 id="navbar-hire-me"
               >
-                Hire Me
+                Hire ME
               </a>
             </li>
           </ul>

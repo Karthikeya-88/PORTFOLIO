@@ -84,7 +84,7 @@ function App() {
           </div>
           <HireMeSection />
         </div>
-        <div className="text-center text-white m-0 p-0 d-flex justify-content-center align-items-center">
+        <div className="text-center text-white mt-4 p-0 d-flex justify-content-center align-items-center">
           <p style={{ fontFamily: "Perpetua" }}>
             Copyright{" "}
             <span>
