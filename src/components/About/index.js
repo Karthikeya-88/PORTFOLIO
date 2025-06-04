@@ -80,7 +80,7 @@ const About = () => {
         <div className="hero-image desktop-image">
           <div className="image-wrapper">
             <img
-              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1742632927/IMG_20230106_135825-2_lykx0h.jpg"
+              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1744805933/IMG_20230106_135825-3_uthsft.jpg"
               alt="Karthikeya D"
             />
             <div className="image-animation"></div>
